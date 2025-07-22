@@ -1,4 +1,7 @@
-"Creating for a single element";
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+// "Creating for a single element";
 /*
         const heading = React.createElement("h1", {id: "heading"}, "Hello from Lecture 1");
         console.log(heading);   // Return Object
@@ -7,7 +10,7 @@
 
         */
 
-"Create for a Nested div, like below as Parent-child";
+// "Create for a Nested div, like below as Parent-child";
 /* 
   <div id="parent">
      <div id="child">
@@ -34,7 +37,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(parent);
 */
 
-"Create for a Nested div as Siblings"
+// "Create for a Nested div as Siblings"
 /* 
   <div id="parent">
      <div id="child">
@@ -47,9 +50,7 @@ root.render(parent);
 const parent = React.createElement(
    "div", 
    {id: "parent"}, 
-   React.createElement(
-     "div", 
-     {id:"child"}, 
+   React.createElement("div",  {id:"child"}, 
      [React.createElement("h1", {},"Hello, H1 tag"),
       React.createElement("h2", {}, "Hello H2 tag")]
    )
@@ -60,7 +61,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(parent);
 */
 
-"Create for a Nested div as Siblings"
+// "Create for a Nested div as Siblings"
 /* 
   <div id="parent">
      <div id="child1">
