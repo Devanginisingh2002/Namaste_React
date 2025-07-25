@@ -1,0 +1,1 @@
+{"mappings":"AAAA;;;;;AAKA","sources":["index.css"],"sourcesContent":["*{\n    margin: 0px;\n    padding: 0px;\n}\n\n.logo{\n    height: 100px;\n}"],"names":[],"version":3,"file":"lect_4.9e4c6fd2.css.map","sourceRoot":"/__parcel_source_root/"}
