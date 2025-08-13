@@ -1,9 +1,46 @@
-* {
-  margin: 0;
-  padding: 0;
+.header {
+  border: 1px solid #000;
+  justify-content: space-between;
+  display: flex;
 }
 
 .logo {
-  height: 100px;
+  width: 200px;
+}
+
+.nav-items, ul {
+  font-size: 24px;
+  list-style-type: none;
+  display: flex;
+}
+
+.nav-items, ul, li {
+  margin: 10px;
+  padding: 10px;
+}
+
+.search {
+  padding: 10px;
+}
+
+.res-card {
+  width: 200px;
+  height: 400px;
+  padding: 5px;
+}
+
+.res-card:hover {
+  cursor: pointer;
+  border: 1px solid #000;
+}
+
+.item-1 {
+  width: 150px;
+  height: 150px;
+}
+
+.res-container {
+  flex-wrap: wrap;
+  display: flex;
 }
 /*# sourceMappingURL=lect_4.9e4c6fd2.css.map */
