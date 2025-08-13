@@ -767,8 +767,9 @@ var _clientDefault = parcelHelpers.interopDefault(_client);
 };
 _c = Header;
 const RestaurantCard = (props)=>{
-    // const {resName, cusienes} = props;
+    // const {resName, cusienes} = props;, ? optional chaining
     const { resData } = props;
+    const { name, cuisines, avgRating, deliveryTime, costForTwo, cloudinaryImageId } = resData?.info;
     console.log(props);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "res-card",
@@ -778,27 +779,17 @@ const RestaurantCard = (props)=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                 className: "item-1",
-                src: `https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${resData.info.cloudinaryImageId}`,
+                src: `https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${cloudinaryImageId}`,
                 alt: "food"
             }, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 50,
+                lineNumber: 51,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                 children: [
                     "Name: ",
-                    resData.info.name
-                ]
-            }, void 0, true, {
-                fileName: "app.js",
-                lineNumber: 56,
-                columnNumber: 13
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                children: [
-                    "cuisines: ",
-                    resData.info.cuisines.join(", ")
+                    name
                 ]
             }, void 0, true, {
                 fileName: "app.js",
@@ -806,30 +797,40 @@ const RestaurantCard = (props)=>{
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                children: resData.info.avgRating
-            }, void 0, false, {
+                children: [
+                    "cuisines: ",
+                    cuisines.join(", ")
+                ]
+            }, void 0, true, {
                 fileName: "app.js",
                 lineNumber: 58,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                children: resData.info.sla.deliveryTime
+                children: avgRating
             }, void 0, false, {
                 fileName: "app.js",
                 lineNumber: 59,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                children: resData.info.costForTwo
+                children: resData.info.sla.deliveryTime
             }, void 0, false, {
                 fileName: "app.js",
                 lineNumber: 60,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                children: costForTwo
+            }, void 0, false, {
+                fileName: "app.js",
+                lineNumber: 61,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "app.js",
-        lineNumber: 46,
+        lineNumber: 47,
         columnNumber: 9
     }, undefined);
 };
@@ -1506,27 +1507,27 @@ const Body = ()=>{
                 children: "Search"
             }, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 733,
+                lineNumber: 734,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "res-container",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {
-                    resData: resList[0]
-                }, void 0, false, {
-                    fileName: "app.js",
-                    lineNumber: 739,
-                    columnNumber: 18
-                }, undefined)
+                children: resList.map((restaurant)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {
+                        resData: restaurant
+                    }, restaurant.info.id, false, {
+                        fileName: "app.js",
+                        lineNumber: 743,
+                        columnNumber: 47
+                    }, undefined))
             }, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 735,
+                lineNumber: 736,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "app.js",
-        lineNumber: 732,
+        lineNumber: 733,
         columnNumber: 9
     }, undefined);
 };
@@ -1537,18 +1538,18 @@ const AppLayout = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Header, {}, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 747,
+                lineNumber: 754,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Body, {}, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 748,
+                lineNumber: 755,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "app.js",
-        lineNumber: 746,
+        lineNumber: 753,
         columnNumber: 9
     }, undefined);
 };
@@ -1556,7 +1557,7 @@ _c3 = AppLayout;
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
     fileName: "app.js",
-    lineNumber: 754,
+    lineNumber: 761,
     columnNumber: 13
 }, undefined));
 var _c, _c1, _c2, _c3;
