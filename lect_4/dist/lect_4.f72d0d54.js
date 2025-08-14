@@ -1516,7 +1516,7 @@ const Body = ()=>{
                         resData: restaurant
                     }, restaurant.info.id, false, {
                         fileName: "app.js",
-                        lineNumber: 743,
+                        lineNumber: 744,
                         columnNumber: 47
                     }, undefined))
             }, void 0, false, {
@@ -1538,18 +1538,18 @@ const AppLayout = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Header, {}, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 754,
+                lineNumber: 755,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Body, {}, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 755,
+                lineNumber: 756,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "app.js",
-        lineNumber: 753,
+        lineNumber: 754,
         columnNumber: 9
     }, undefined);
 };
@@ -1557,7 +1557,7 @@ _c3 = AppLayout;
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
     fileName: "app.js",
-    lineNumber: 761,
+    lineNumber: 762,
     columnNumber: 13
 }, undefined));
 var _c, _c1, _c2, _c3;

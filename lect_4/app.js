@@ -739,6 +739,7 @@ const Body = () => {
 
                  {/* <RestaurantCard resData = {resList[0]}/> */}
 
+{/* Whenever loop or map, use give to key*/}
                  {
                     resList.map(restaurant => <RestaurantCard key = {restaurant.info.id} resData = {restaurant}/>
                     
